@@ -1,0 +1,9 @@
+<!doctype html>
+<link rel="stylesheet" type="text/css"
+  href="{{url_for('static', filename='style.css')}}"/>
+<title>Home</title>
+<ol>
+{%for person in people%}
+<li><a href="/profile/{{person.name}}"> {{person.name}}</a></li>
+{%endfor%}
+</ol>
